@@ -7,3 +7,7 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
+
+/sample-report.pdf
+  ! Content-Security-Policy
+  ! X-Frame-Options
