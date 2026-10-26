@@ -450,10 +450,10 @@
   }
 
   .package-grid {
-    max-width: 920px;
+    max-width: var(--max-width);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
     align-items: stretch;
   }
@@ -547,6 +547,35 @@
 
   .package-card .btn {
     align-self: flex-start;
+  }
+
+  .package-note {
+    font-size: 0.85rem;
+    color: #6b7585;
+    margin: -14px 0 20px;
+  }
+
+  .package-card.featured .package-note { color: var(--text-muted); }
+
+  .package-link {
+    margin-top: 14px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--navy);
+    border-bottom: 2px solid var(--gold);
+    align-self: flex-start;
+  }
+
+  .addon {
+    text-align: center;
+    margin-top: 40px;
+    color: #4a5568;
+  }
+
+  .addon a {
+    color: var(--navy);
+    font-weight: 700;
+    border-bottom: 2px solid var(--gold);
   }
 
   /* ---------- About ---------- */
@@ -840,45 +869,63 @@
         <p>A prioritized checklist you or your developer can act on immediately — no security background needed.</p>
       </div>
     </div>
-    <p class="how-next">Want us to go further? <a href="#packages">See what a deep-dive assessment covers →</a></p>
+    <p class="how-next">Want us to go further? <a href="#packages">Compare our plans →</a></p>
   </section>
 
   <!-- Packages -->
   <section class="packages" id="packages">
     <div class="section-head">
-      <div class="section-tag">Go Deeper</div>
-      <h2>Your free scan is the start, not the whole picture</h2>
-      <p>Automated tools catch a lot — but not everything. When you're ready to know for certain, and to build a real plan around it, that's where the deep-dive comes in.</p>
+      <div class="section-tag">Plans</div>
+      <h2>Start free. Go deeper when you're ready.</h2>
+      <p>Every engagement starts with your written authorisation. We only test systems you own or are authorised to have tested.</p>
     </div>
     <div class="package-grid">
 
       <div class="package-card">
         <div class="package-badge">Start here</div>
-        <h3>Free Automated Scan</h3>
+        <h3>Free Security Snapshot</h3>
         <p class="package-price">$0</p>
         <ul class="package-features">
-          <li>Vulnerability, attack surface &amp; SSL/TLS checks</li>
-          <li>Plain-English findings report</li>
-          <li>Severity ratings &amp; urgency for each issue</li>
-          <li>A prioritized action plan</li>
+          <li>Automated website, port and SSL/TLS checks</li>
+          <li>Plain-English report with severity and urgency for every issue</li>
+          <li>Findings mapped to ISO 27001:2022 controls</li>
+          <li>A prioritised action plan</li>
         </ul>
-        <a href="#contact" class="btn btn-outline">Get My Free Scan</a>
+        <p class="package-note">Requires the website owner's written authorisation.</p>
+        <a href="mailto:contact@reconsec.online?subject=Free%20Security%20Snapshot%20request&amp;body=Website%20to%20scan%3A%20%0ACompany%20name%3A%20%0AYour%20name%20and%20role%3A%20%0A%0AI%20confirm%20that%20I%20own%20this%20website%20or%20am%20authorised%20to%20request%20a%20security%20scan%20of%20it%2C%20and%20I%20authorise%20ReconSec%20to%20run%20an%20automated%2C%20non-intrusive%20security%20scan%20of%20it." class="btn btn-outline">Request My Free Scan</a>
+        <a href="/sample-report.pdf" class="package-link" target="_blank" rel="noopener">View a sample report →</a>
+      </div>
+
+      <div class="package-card">
+        <div class="package-badge">Compliance</div>
+        <h3>ISO 27001 Readiness</h3>
+        <p class="package-price">From USD 2,000</p>
+        <ul class="package-features">
+          <li>Gap assessment against ISO 27001:2022 clauses and Annex A controls</li>
+          <li>Risk assessment and a draft Statement of Applicability</li>
+          <li>A prioritised roadmap to certification readiness</li>
+          <li>Mapped to local requirements: SECP, SBP and Gulf data protection laws</li>
+        </ul>
+        <p class="package-note">Certification is issued by an accredited certification body. We get you ready for it.</p>
+        <a href="mailto:contact@reconsec.online?subject=ISO%2027001%20Readiness" class="btn btn-outline">Ask About ISO 27001</a>
       </div>
 
       <div class="package-card featured">
-        <div class="package-badge featured-badge">Recommended next step</div>
-        <h3>Deep-Dive Assessment</h3>
-        <p class="package-price">Custom quote</p>
+        <div class="package-badge featured-badge">Most complete</div>
+        <h3>Security Assurance</h3>
+        <p class="package-price">From USD 3,500</p>
         <ul class="package-features">
-          <li>Manual penetration testing by a real analyst — not just automated tools</li>
-          <li>Every free-scan finding verified and explored further by hand</li>
-          <li>GRC recommendations — a practical roadmap to close compliance gaps</li>
-          <li>A walkthrough call with your team to explain results and next steps</li>
+          <li>Expert-led security testing of an agreed website or application</li>
+          <li>Delivered with vetted, certified testing partners</li>
+          <li>Clear findings report plus a walkthrough call with your team</li>
+          <li>3 months of monitoring included: monthly scans and reports</li>
         </ul>
-        <a href="#contact" class="btn btn-primary">Ask About a Deep-Dive</a>
+        <p class="package-note">Monitoring then continues from USD 250 per month.</p>
+        <a href="mailto:contact@reconsec.online?subject=Security%20Assurance" class="btn btn-primary">Get a Quote</a>
       </div>
 
     </div>
+    <p class="addon">Only need ongoing monitoring? Monthly scans and reports from USD 150 per month. <a href="mailto:contact@reconsec.online?subject=Monthly%20Monitoring">Ask us →</a></p>
   </section>
 
   <!-- About -->
@@ -911,11 +958,11 @@
     <div class="section-head">
       <div class="section-tag">Contact</div>
       <h2>Let's make your business more secure</h2>
-      <p>Start with a free automated scan, or ask us about a deep-dive assessment. Either way, we'll explain everything in plain language.</p>
+      <p>Start with a free scan, or ask about ISO 27001 readiness or security assurance. Either way, we'll explain everything in plain language.</p>
     </div>
     <div class="contact-box">
       <h2>Ready when you are</h2>
-      <p>Send us your website — or tell us you're ready to go deeper — and we'll get back to you within days.</p>
+      <p>Send us your website with your authorisation to scan it, or tell us you're ready to go deeper. We'll get back to you within days.</p>
       <div class="contact-links">
         <a class="contact-item" href="mailto:contact@reconsec.online">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
